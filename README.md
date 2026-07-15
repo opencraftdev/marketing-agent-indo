@@ -26,12 +26,16 @@ Yang terjadi:
 3. Brief dipublikasikan sebagai **artifact Claude** — halaman interaktif di claude.ai, bisa dibuka dari mana saja dan di-share.
 4. Riset **read-only** — agen tidak posting, komen, atau join grup atas nama kamu.
 
+Selain itu ada skill `ide-konten`: kasih link (metrik/insight atau hasil riset kamu sendiri di FB/Threads/X), agen buka tiap link, ambil screenshot sebagai bukti, dan kasih **daftar ide konten** untuk Threads/X/Facebook — bukan brief lengkap, kamu yang posting sendiri.
+
 ## Isi plugin
 
 | Komponen | Fungsi |
 |---|---|
-| Agent `marketing-organik` | Riset browser + tulis brief |
+| Agent `marketing-organik` | Riset browser mandiri (cari grup/keyword sendiri) + tulis brief 30 hari |
 | Skill `marketing-organik` | Pemicu: kumpulkan info produk, jalankan agen, publish artifact |
+| Agent `ide-konten` | Kunjungi link yang dikasih user + screenshot + tulis daftar ide konten |
+| Skill `ide-konten` | Pemicu: kumpulkan link dari user, jalankan agen, publish artifact |
 
 ## Syarat
 
