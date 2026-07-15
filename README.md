@@ -1,21 +1,24 @@
 # marketing-agent-indo
 
-Kumpulan skill Claude Code untuk pekerjaan marketing berbahasa Indonesia.
+Agen Claude Code untuk riset pasar organik & brief marketing berbahasa Indonesia.
 
-## Skill yang tersedia
+## Isi
 
-| Skill | Fungsi |
+| Komponen | Fungsi |
 |---|---|
-| `copywriting` | Headline, tagline, deskripsi produk, copy iklan (Meta/Google/marketplace), landing page |
-| `konten-sosmed` | Caption IG/TikTok/X/LinkedIn, hook video pendek, script Reels/TikTok, kalender konten |
-| `email-marketing` | Subject line, email promo, welcome series, broadcast WhatsApp |
+| Agent `marketing-organik` (`.claude/agents/`) | Riset grup Facebook & Threads via Claude in Chrome, petakan di mana target pasar berkumpul dan apa keluhannya, lalu tulis brief marketing organik ke folder `briefs/` |
+| Skill `marketing-organik` (`.claude/skills/`) | Pemicu: kumpulkan info produk dari user lalu jalankan agennya |
 
 ## Cara pakai
 
-Buka Claude Code di dalam repo ini — skill di `.claude/skills/` otomatis terdeteksi. Cukup minta secara natural, misalnya:
+Buka Claude Code di dalam repo ini, lalu minta secara natural:
 
-- "Buatkan copy iklan Meta untuk kopi literan"
-- "Bikin 5 ide konten TikTok buat brand skincare"
-- "Tulis welcome email series untuk toko online baju anak"
+> "Saya susah marketing produk kopi literan saya, target anak kantoran Jakarta, harga 45rb. Tolong riset dan buatkan brief."
 
-Semua output dalam bahasa Indonesia.
+Yang terjadi:
+
+1. Agen buka Chrome (browser "PC Gaming Raka"), riset grup Facebook & Threads dengan beberapa kata kunci.
+2. Hasilnya ditulis ke `briefs/brief-<produk>-<tanggal>.md`: peta pasar, pain points + kutipan asli, rencana aksi 30 hari, dan 5–10 ide konten agar produk naik.
+3. Riset read-only — tidak posting/komen/join grup apa pun.
+
+**Syarat**: ekstensi Claude in Chrome aktif di browser, dan sudah login Facebook/Threads di Chrome tersebut.
