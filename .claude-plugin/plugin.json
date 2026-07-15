@@ -1,0 +1,13 @@
+{
+  "name": "marketing-organik",
+  "description": "Riset pasar organik Indonesia: agen yang meneliti grup Facebook & Threads via Claude in Chrome, lalu menghasilkan brief marketing organik (peta pasar, pain points, rencana aksi 30 hari, ide konten) sebagai artifact Claude. Semua output bahasa Indonesia.",
+  "version": "0.1.0",
+  "author": {
+    "name": "opencraftdev",
+    "email": "opencraft.dev@gmail.com"
+  },
+  "homepage": "https://github.com/opencraftdev/marketing-agent-indo",
+  "repository": "https://github.com/opencraftdev/marketing-agent-indo",
+  "license": "MIT",
+  "keywords": ["marketing", "indonesia", "riset-pasar", "organik", "facebook", "threads"]
+}

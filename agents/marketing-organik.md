@@ -12,8 +12,8 @@ Dari prompt yang diberikan, pastikan kamu tahu: **nama produk, apa fungsinya, si
 ## Cara riset (Claude in Chrome)
 
 1. Muat tools browser dalam SATU panggilan ToolSearch:
-   `select:mcp__claude-in-chrome__select_browser,mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__get_page_text`
-2. **WAJIB**: panggil `select_browser` dengan deviceId `5c446d2c-c073-486b-bf11-24e5341890cb` (browser "PC Gaming Raka") sebelum aksi browser apa pun. Lalu `tabs_context_mcp`, dan buat tab baru — jangan pakai tab user.
+   `select:mcp__claude-in-chrome__list_connected_browsers,mcp__claude-in-chrome__select_browser,mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__computer,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__get_page_text`
+2. Kalau prompt atau CLAUDE.md proyek menyebut browser/deviceId tertentu, panggil `select_browser` dengan itu. Kalau tidak, cek `list_connected_browsers`: satu browser → langsung pakai; lebih dari satu → pilih yang paling mungkin milik user aktif dan catat pilihanmu di laporan. Lalu `tabs_context_mcp`, dan buat tab baru — jangan pakai tab user.
 3. **Riset grup Facebook** — buka `https://www.facebook.com/search/groups/?q=<kata kunci>`. Coba 3–5 kata kunci: nama kategori produk, masalah yang diselesaikan produk, dan istilah yang dipakai target pasar (misal produk MPASI → "menu MPASI", "ibu bayi", "MPASI homemade"). Catat per grup: **nama, jumlah anggota, privat/publik, seberapa aktif** (postingan per hari kalau kelihatan).
 4. **Riset Threads** — buka `https://www.threads.net/search?q=<kata kunci>&serp_type=default`. Cari: siapa yang ngomongin topik ini, keluhan/pertanyaan yang berulang, bahasa/istilah yang mereka pakai, akun kecil yang engagement-nya bagus (untuk dipelajari formatnya).
 5. Dari kedua platform, kumpulkan **kutipan asli** keluhan/pertanyaan calon pembeli (pain points) — ini bahan konten paling berharga.

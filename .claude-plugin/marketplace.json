@@ -1,0 +1,14 @@
+{
+  "name": "marketing-agent-indo",
+  "owner": {
+    "name": "opencraftdev",
+    "email": "opencraft.dev@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "marketing-organik",
+      "source": "./",
+      "description": "Riset pasar organik Indonesia (grup Facebook & Threads) + brief marketing berbahasa Indonesia sebagai artifact Claude."
+    }
+  ]
+}
