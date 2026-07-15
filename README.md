@@ -19,6 +19,7 @@ Yang terjadi:
 
 1. Agen buka Chrome (browser "PC Gaming Raka"), riset grup Facebook & Threads dengan beberapa kata kunci.
 2. Hasilnya ditulis ke `briefs/brief-<produk>-<tanggal>.md`: peta pasar, pain points + kutipan asli, rencana aksi 30 hari, dan 5–10 ide konten agar produk naik.
-3. Riset read-only — tidak posting/komen/join grup apa pun.
+3. Brief dipublikasikan sebagai **artifact Claude** — halaman interaktif di claude.ai yang bisa dibuka dari browser mana pun dan di-share via link.
+4. Riset read-only — tidak posting/komen/join grup apa pun.
 
-**Syarat**: ekstensi Claude in Chrome aktif di browser, dan sudah login Facebook/Threads di Chrome tersebut.
+**Syarat**: ekstensi Claude in Chrome aktif di browser dan sudah login Facebook/Threads. Untuk artifact: sesi Claude Code login via `/login` (plan Pro/Max/Team/Enterprise), CLI v2.1.183+.

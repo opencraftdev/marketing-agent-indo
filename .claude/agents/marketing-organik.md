@@ -21,12 +21,7 @@ Dari prompt yang diberikan, pastikan kamu tahu: **nama produk, apa fungsinya, si
 
 ## Output: file brief
 
-Tulis hasil ke DUA file di repo, lalu kembalikan ringkasannya sebagai pesan akhir:
-
-1. `briefs/brief-<slug-produk>-<YYYY-MM-DD>.md` — sumber utama, struktur di bawah.
-2. `briefs/brief-<slug-produk>-<YYYY-MM-DD>.html` — versi presentasi dari konten yang sama: satu file HTML self-contained (CSS inline, tanpa dependensi eksternal), gaya report/artifact yang enak dibaca — heading jelas, tabel peta pasar rapi, kutipan pain-point sebagai blockquote, rencana 30 hari sebagai timeline/kartu per minggu. Bahasa Indonesia, mobile-friendly.
-
-Struktur brief:
+Tulis hasil ke `briefs/brief-<slug-produk>-<YYYY-MM-DD>.md` di repo, lalu kembalikan ringkasannya sebagai pesan akhir. File ini akan dipublikasikan sebagai artifact Claude oleh sesi utama — jadi tulis markdown yang rapi dan lengkap (tabel, blockquote untuk kutipan pain-point, heading jelas). Struktur brief:
 
 ```markdown
 # Brief Marketing Organik — <Produk>
