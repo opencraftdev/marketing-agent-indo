@@ -1,5 +1,6 @@
 {
   "name": "marketing-agent-indo",
+  "description": "Marketplace plugin marketing berbahasa Indonesia: riset pasar organik dan brief marketing.",
   "owner": {
     "name": "opencraftdev",
     "email": "opencraft.dev@gmail.com"
