@@ -9,11 +9,12 @@ Skill ini mendelegasikan ke agen `ide-konten`. Beda dengan skill `marketing-orga
 
 ## Langkah
 
-1. Kumpulkan dari user: **daftar link** (link metrik/insight, dan/atau link hasil riset sendiri — post FB, thread Threads, tweet X, dll). Kalau user belum kasih link sama sekali, minta dulu — skill ini tidak jalan tanpa link. Info produk (nama, target, harga) opsional, tanya singkat kalau relevan tapi jangan blocking.
-2. Jalankan Agent tool dengan `subagent_type: "ide-konten"`. Masukkan semua link + info produk (kalau ada) + path repo ini ke prompt agen, supaya file & screenshot ditulis ke `briefs/`.
-3. Agen akan buka tiap link lewat Claude in Chrome (browser "PC Gaming Raka"), baca isinya, ambil screenshot sebagai bukti, lalu tulis daftar ide ke `briefs/ide-konten-<produk>-<tanggal>.md` + screenshot ke `briefs/screenshots/<slug>-<tanggal>/`.
-4. Setelah agen selesai, **publikasikan sebagai artifact Claude**: baca file markdown ide + tiap screenshot yang disebut di dalamnya, embed tiap screenshot sebagai data URI (base64) di HTML artifact — jangan link ke path lokal (artifact tidak bisa akses filesystem). Layout: tiap ide jadi kartu — hook/angle, platform yang cocok (Threads/X/Facebook), alasan (dikaitkan ke screenshot/sumbernya), dan sumbernya (link asal).
-5. Sampaikan ke user: URL artifact + lokasi file + jumlah ide yang dihasilkan. Ingatkan: ini ide doang, user yang posting. Bahasa Indonesia. Kalau publish artifact gagal, kasih file .md + folder screenshot saja.
+1. **Cek `brands/` dulu**: kalau ada profil persona (`brands/<slug>/persona.md`) yang cocok dengan brand/akun user, baca dan sertakan isinya ke prompt agen — hook & bahasa WAJIB mengikuti profil itu (persona kata ganti, kata terlarang, contoh gaya asli). Kalau belum ada profil, tawarkan singkat jalankan skill `audit-persona` dulu (tidak blocking — user boleh skip).
+2. Kumpulkan dari user: **daftar link** (link metrik/insight, dan/atau link hasil riset sendiri — post FB, thread Threads, tweet X, dll). Kalau user belum kasih link sama sekali, minta dulu — skill ini tidak jalan tanpa link. Info produk (nama, target, harga) opsional, tanya singkat kalau relevan tapi jangan blocking.
+3. Jalankan Agent tool dengan `subagent_type: "ide-konten"`. Masukkan semua link + info produk (kalau ada) + isi profil persona (kalau ada) + path repo ini ke prompt agen, supaya file & screenshot ditulis ke `briefs/`.
+4. Agen akan buka tiap link lewat Claude in Chrome (browser mana pun yang terhubung — kalau CLAUDE.md user menyebut browser tertentu, agen pakai itu), baca isinya, ambil screenshot sebagai bukti, lalu tulis daftar ide ke `briefs/ide-konten-<produk>-<tanggal>.md` + screenshot ke `briefs/screenshots/<slug>-<tanggal>/`.
+5. Setelah agen selesai, **publikasikan sebagai artifact Claude**: baca file markdown ide + tiap screenshot yang disebut di dalamnya, embed tiap screenshot sebagai data URI (base64) di HTML artifact — jangan link ke path lokal (artifact tidak bisa akses filesystem). Layout: tiap ide jadi kartu — hook/angle, platform yang cocok (Threads/X/Facebook), alasan (dikaitkan ke screenshot/sumbernya), dan sumbernya (link asal).
+6. Sampaikan ke user: URL artifact + lokasi file + jumlah ide yang dihasilkan. Ingatkan: ini ide doang, user yang posting. Bahasa Indonesia. Kalau publish artifact gagal, kasih file .md + folder screenshot saja.
 
 ## Catatan
 

@@ -11,7 +11,7 @@ Skill ini mendelegasikan riset ke agen `marketing-organik`.
 
 1. Kumpulkan dari user (tanya kalau belum disebut): **nama produk, fungsinya, target pembeli, kisaran harga**. Kalau user sudah menyebut semuanya, jangan tanya ulang.
 2. Jalankan Agent tool dengan `subagent_type: "marketing-organik"`. Masukkan semua info produk ke dalam prompt agen, plus path repo ini supaya brief ditulis ke folder `briefs/`.
-3. Agen akan riset grup Facebook & Threads lewat Claude in Chrome (browser "PC Gaming Raka") dan menulis brief ke `briefs/brief-<produk>-<tanggal>.md`.
+3. Agen akan riset grup Facebook & Threads lewat Claude in Chrome (browser mana pun yang terhubung — kalau CLAUDE.md user menyebut browser tertentu, agen pakai itu) dan menulis brief ke `briefs/brief-<produk>-<tanggal>.md`.
 4. Setelah agen selesai, **publikasikan file brief itu sebagai artifact Claude** (halaman interaktif di claude.ai) dengan judul "Brief Marketing Organik — <Produk>". Buat halamannya enak dibaca: ringkasan di atas, tabel peta pasar, kutipan pain-point, rencana 30 hari sebagai kartu per minggu.
 5. Sampaikan ke user: URL artifact + lokasi file brief + ringkasan temuan utama + 3 aksi pertama yang harus dilakukan minggu ini. Bahasa Indonesia. Kalau publish artifact gagal (belum /login, plan tidak mendukung, atau fitur nonaktif), sampaikan alasannya dan berikan file .md saja.
 
