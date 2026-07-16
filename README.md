@@ -28,6 +28,8 @@ Yang terjadi:
 
 Selain itu ada skill `ide-konten`: kasih link (metrik/insight atau hasil riset kamu sendiri di FB/Threads/X), agen buka tiap link, ambil screenshot sebagai bukti, dan kasih **daftar ide konten** untuk Threads/X/Facebook — bukan brief lengkap, kamu yang posting sendiri.
 
+Ada juga skill `cari-komunitas`: kasih produk kamu (deskripsi atau link), agen cari **grup Facebook** tempat target pasarmu ngumpul, nilai tiap grup (anggota, aktivitas, boleh promosi atau tidak), **auto-join grup rekomendasi** (maks 5 per run, pakai akun FB kamu), lalu kasih daftar komunitas + status join. Lebih ringan dari `marketing-organik` — tanpa brief 30 hari. Pastikan sudah login Facebook di Chrome-nya.
+
 ## Isi plugin
 
 | Komponen | Fungsi |
@@ -36,6 +38,8 @@ Selain itu ada skill `ide-konten`: kasih link (metrik/insight atau hasil riset k
 | Skill `marketing-organik` | Pemicu: kumpulkan info produk, jalankan agen, publish artifact |
 | Agent `ide-konten` | Kunjungi link yang dikasih user + screenshot + tulis daftar ide konten |
 | Skill `ide-konten` | Pemicu: kumpulkan link dari user, jalankan agen, publish artifact |
+| Agent `cari-komunitas` | Cari grup FB dari info produk + nilai kelayakan + auto-join maks 5 grup |
+| Skill `cari-komunitas` | Pemicu: tanya produk (deskripsi/link), jalankan agen, publish artifact |
 
 ## Syarat
 
