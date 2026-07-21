@@ -15,7 +15,7 @@ Skill ini kebalikan dari `audit-persona`: bukan mempelajari gaya user sendiri, t
 
 3. Agen tulis hasil ke `brands/research/ajarin-<slug>-<YYYY-MM-DD>.md` (slug = nama akun/topik yang dipelajari).
 
-4. **Publikasikan sebagai artifact Claude**: baca file markdown hasil agen. Layout: per post yang dibedah satu kartu — kutipan post + metrik → bedahan (hook, struktur, bahasa, respons audiens) → "pelajaran yang bisa dipakai" — lalu satu bagian penutup **pola umum lintas post** (teori yang berulang di semua sampel).
+4. **Publikasikan sebagai artifact Claude**: baca file markdown hasil agen. **Sebelum menulis HTML, baca `${CLAUDE_PLUGIN_ROOT}/artifact-style.md`** dan ikuti design system-nya: gaya koran ala artikel NYT — SELALU terang (putih polos, jangan dark mode), kolom teks sempit 600px, headline serif Georgia besar & tebal, deck abu, byline sans kecil, item dipisah garis tipis. Layout mengikuti pola "Pelajaran" di panduan itu: per post yang dibedah satu item bergaris — kutipan post verbatim sebagai pull quote + metrik sebagai angka besar → bedahan (hook, struktur, bahasa, respons audiens) → "pelajaran yang bisa dipakai" — lalu satu bagian penutup **pola umum lintas post** (teori yang berulang di semua sampel). (Kalau file panduan tidak ketemu, tetap pakai prinsipnya: putih flat, serif Georgia 18px untuk headline+body, sans Franklin/Arial kecil untuk label, hitam-abu tanpa warna.)
 
 5. Sampaikan ke user: URL artifact + lokasi file + berapa post yang dibedah. Ingatkan: pelajaran ini makin tajam kalau digabung dengan `audit-persona` — profil brand user yang sudah ada bisa di-update pakai temuan ini (misal tingkat keberanian hook atau format yang mau ditiru), tinggal jalankan `audit-persona` mode update.
 
