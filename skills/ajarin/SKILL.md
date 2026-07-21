@@ -1,6 +1,6 @@
 ---
 name: ajarin
-description: Belajar dari postingan orang lain yang rame — user kasih link post/akun Threads (atau X/FB) yang banyak views, agen buka via Claude in Chrome lalu bedah KENAPA post itu perform: hook-nya, struktur, bahasa, cara audiens merespons. Hasil pelajaran disimpan ke brands/research/ dan dipresentasikan sebagai artifact. Gunakan saat user bilang "ajarin", "ajarin dari akun ini", "kenapa post ini rame", "bedah post si A", "pelajarin akun ini", atau kasih link post viral dan minta dipelajari.
+description: Belajar dari postingan orang lain yang rame — user kasih link post/akun Threads (atau X/FB) yang banyak views, agen buka via Claude Browser (browser bawaan Claude Desktop) lalu bedah KENAPA post itu perform: hook-nya, struktur, bahasa, cara audiens merespons. Hasil pelajaran disimpan ke brands/research/ dan dipresentasikan sebagai artifact. Gunakan saat user bilang "ajarin", "ajarin dari akun ini", "kenapa post ini rame", "bedah post si A", "pelajarin akun ini", atau kasih link post viral dan minta dipelajari.
 ---
 
 # Ajarin — Bedah Post yang Rame
@@ -11,11 +11,11 @@ Skill ini kebalikan dari `audit-persona`: bukan mempelajari gaya user sendiri, t
 
 1. **Minta link dari user** — skill ini tidak jalan tanpa link. Yang diterima: link post spesifik (yang keliatan rame), atau link profil akun (agen ambil beberapa post teratasnya). Boleh campur, boleh banyak. Tanya singkat juga: user pengen belajar buat brand yang mana (biar pelajaran bisa dikaitkan ke profil di `brands/` kalau ada — tidak blocking).
 
-2. **Jalankan Agent tool** `subagent_type: "ajarin"` dengan semua link + path repo. Agen buka tiap link via Claude in Chrome (browser mana pun yang terhubung — kalau CLAUDE.md user menyebut browser tertentu, agen pakai itu), baca post + metrik (views/like/reply/repost) + reply-reply teratas, screenshot sebagai bukti, lalu bedah tiap post: hook masuk pola apa, struktur & bahasa gimana, audiens nyantol di bagian mana (keliatan dari reply).
+2. **Jalankan Agent tool** `subagent_type: "ajarin"` dengan semua link + path repo. Agen buka tiap link via Claude Browser (browser bawaan Claude Desktop), baca post + metrik (views/like/reply/repost) + reply-reply teratas, kutip verbatim sebagai bukti, lalu bedah tiap post: hook masuk pola apa, struktur & bahasa gimana, audiens nyantol di bagian mana (keliatan dari reply).
 
-3. Agen tulis hasil ke `brands/research/ajarin-<slug>-<YYYY-MM-DD>.md` (slug = nama akun/topik yang dipelajari) + screenshot ke `brands/research/screenshots/<slug>-<tanggal>/`.
+3. Agen tulis hasil ke `brands/research/ajarin-<slug>-<YYYY-MM-DD>.md` (slug = nama akun/topik yang dipelajari).
 
-4. **Publikasikan sebagai artifact Claude**: baca file markdown + screenshot yang ada, embed screenshot sebagai data URI (base64) di HTML artifact — jangan link ke path lokal. Layout: per post yang dibedah satu kartu — kutipan post + metrik → bedahan (hook, struktur, bahasa, respons audiens) → "pelajaran yang bisa dipakai" — lalu satu bagian penutup **pola umum lintas post** (teori yang berulang di semua sampel).
+4. **Publikasikan sebagai artifact Claude**: baca file markdown hasil agen. Layout: per post yang dibedah satu kartu — kutipan post + metrik → bedahan (hook, struktur, bahasa, respons audiens) → "pelajaran yang bisa dipakai" — lalu satu bagian penutup **pola umum lintas post** (teori yang berulang di semua sampel).
 
 5. Sampaikan ke user: URL artifact + lokasi file + berapa post yang dibedah. Ingatkan: pelajaran ini makin tajam kalau digabung dengan `audit-persona` — profil brand user yang sudah ada bisa di-update pakai temuan ini (misal tingkat keberanian hook atau format yang mau ditiru), tinggal jalankan `audit-persona` mode update.
 

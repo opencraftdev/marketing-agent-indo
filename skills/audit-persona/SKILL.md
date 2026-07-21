@@ -1,6 +1,6 @@
 ---
 name: audit-persona
-description: Audit persona brand/user sebelum bikin konten — interview mendalam (tujuan, target audiens, gaya bahasa, batasan) plus analisis gaya bahasa dari link post terakhir user via Claude in Chrome. Hasilnya profil brand di folder brands/ yang dipakai skill lain (ide-konten) biar konten konsisten sama suara user. Gunakan saat user bilang "audit persona", "kenalan dulu sama brand aku", "pelajari gaya bahasa aku", "bikin profil brand", atau saat mau bikin konten tapi belum ada profil di brands/.
+description: Audit persona brand/user sebelum bikin konten — interview mendalam (tujuan, target audiens, gaya bahasa, batasan) plus analisis gaya bahasa dari link post terakhir user via Claude Browser (browser bawaan Claude Desktop). Hasilnya profil brand di folder brands/ yang dipakai skill lain (ide-konten) biar konten konsisten sama suara user. Gunakan saat user bilang "audit persona", "kenalan dulu sama brand aku", "pelajari gaya bahasa aku", "bikin profil brand", atau saat mau bikin konten tapi belum ada profil di brands/.
 ---
 
 # Audit Persona Brand
@@ -23,7 +23,7 @@ Skill ini bikin **profil brand** lewat interview + analisis post asli user, lalu
    - Kata/topik yang DILARANG (misal: jargon kantoran, janji berlebihan, topik sensitif)?
    - Ada idola gaya konten? (akun yang user pengen "mirip kayak dia")
 
-4. **Minta link post terakhir** (opsional tapi sangat dianjurkan): minta 1–5 link post asli user (Threads/X/FB/IG). Kalau user kasih, jalankan Agent tool `subagent_type: "audit-persona"` dengan semua link + path repo — agen buka tiap link via Claude in Chrome, baca teksnya, dan ekstrak pola bahasa asli user (kata khas, panjang kalimat, kebiasaan emoji/slang, struktur post). Kalau user tidak punya post sama sekali, lewati — tandai profil sebagai "belum ada sampel tulisan".
+4. **Minta link post terakhir** (opsional tapi sangat dianjurkan): minta 1–5 link post asli user (Threads/X/FB/IG). Kalau user kasih, jalankan Agent tool `subagent_type: "audit-persona"` dengan semua link + path repo — agen buka tiap link via Claude Browser (browser bawaan Claude Desktop), baca teksnya, dan ekstrak pola bahasa asli user (kata khas, panjang kalimat, kebiasaan emoji/slang, struktur post). Kalau user tidak punya post sama sekali, lewati — tandai profil sebagai "belum ada sampel tulisan".
 
 5. **Tulis profil** ke `brands/<slug>/persona.md` (slug = nama brand kebab-case). Struktur:
 
@@ -55,7 +55,7 @@ Skill ini bikin **profil brand** lewat interview + analisis post asli user, lalu
 ## Catatan
 
 - Interview jangan robotik — kalau jawaban user sudah menjawab pertanyaan berikutnya, jangan tanya ulang.
-- Agen link read-only: tidak posting/komen/like, cuma baca & screenshot.
+- Agen link read-only: tidak posting/komen/like, cuma baca.
 - Satu brand = satu folder di `brands/`. User boleh punya banyak brand.
 - Profil boleh di-update kapan pun dengan menjalankan skill ini lagi (mode update: cuma tanya yang berubah).
 - Saat update, cek juga `brands/research/` (hasil skill `ajarin`): kalau ada pelajaran dari post orang lain yang relevan, tawarkan ke user untuk dimasukkan ke bagian "Arah konten" profil (misal pola hook yang mau ditiru).
